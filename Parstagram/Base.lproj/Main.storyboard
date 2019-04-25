@@ -93,7 +93,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="410" id="vGn-Un-wHD" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="410" id="vGn-Un-wHD" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="410"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vGn-Un-wHD" id="Qmn-fV-uR3">
@@ -135,6 +135,42 @@
                                             <outlet property="captionLabel" destination="XhJ-5B-3gA" id="ilL-Zd-duV"/>
                                             <outlet property="photoView" destination="UKL-kW-jhc" id="NMy-0S-DxC"/>
                                             <outlet property="usernameLabel" destination="Sfv-zN-bWI" id="lvE-Wh-afx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="hRI-A8-i5c" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="438" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hRI-A8-i5c" id="ftm-IL-j2b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erz-Eb-0Ij">
+                                                    <rect key="frame" x="16" y="8" width="43.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLT-63-AmW">
+                                                    <rect key="frame" x="67.5" y="8" width="75" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YLT-63-AmW" secondAttribute="trailing" constant="8" id="32g-wf-axi"/>
+                                                <constraint firstItem="YLT-63-AmW" firstAttribute="leading" secondItem="Erz-Eb-0Ij" secondAttribute="trailing" constant="8" id="3uf-hM-3d7"/>
+                                                <constraint firstItem="YLT-63-AmW" firstAttribute="top" secondItem="ftm-IL-j2b" secondAttribute="top" constant="8" id="ENw-3H-9gA"/>
+                                                <constraint firstItem="YLT-63-AmW" firstAttribute="leading" secondItem="Erz-Eb-0Ij" secondAttribute="trailing" constant="8" id="QGu-rJ-j0A"/>
+                                                <constraint firstItem="Erz-Eb-0Ij" firstAttribute="top" secondItem="ftm-IL-j2b" secondAttribute="top" constant="8" id="bpl-Cc-ioR"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YLT-63-AmW" secondAttribute="bottom" constant="8" id="e3f-G0-58M"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Erz-Eb-0Ij" secondAttribute="bottom" constant="8" id="jDT-S8-fq6"/>
+                                                <constraint firstItem="Erz-Eb-0Ij" firstAttribute="leading" secondItem="ftm-IL-j2b" secondAttribute="leading" constant="16" id="qrV-Zt-sgy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="YLT-63-AmW" id="wss-AS-vHd"/>
+                                            <outlet property="nameLabel" destination="Erz-Eb-0Ij" id="FlX-cF-x7j"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
